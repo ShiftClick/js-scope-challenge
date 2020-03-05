@@ -58,7 +58,5 @@ Generally you should always prefer `let` and `const`.
 ## Challenge
 
 1. Clone this repo, then open `workshop/index.html` in your browser
-1. You should see a JS error in the console
-1. Fix this error by thinking about how variables are scoped
-1. Fix every error that shows up until the app works like this:
+1. You should see a JS error in the console. Fix every error that shows up until the app works:
    ![bursts](https://user-images.githubusercontent.com/9408641/76011766-0a492200-5f0d-11ea-9d20-a8676725255d.gif)
