@@ -8,10 +8,12 @@ document.addEventListener("mousedown", event => {
   function createBurst(x, y) {
     const el = document.createElement("div");
     el.classList.add("burst");
+
     const hue = getRandomHue();
-    const top = clientY - 8 / 2;
-    const left = clientX - 8 / 2;
     el.style.setProperty("--hue", hue);
+
+    const top = clientY - 4;
+    const left = clientX - 4;
     el.style.setProperty("top", top + "px");
     el.style.setProperty("left", left + "px");
 
