@@ -1,22 +1,20 @@
 # JavaScript Scope Challenge
 
-Scope is an important concept in JavaScript. Understanding it will let you write well-organised code that avoids bugs.
-
 ## What is scope?
 
-Scope is the context a variable is available in. It defines what variables can be used at a each part of your code. There are two kinds of scope: global and local.
+Scope is the context a variable is available in. It defines what variables can be used in each part of your code. There are two kinds of scope: global and local.
 
 ### Global scope
 
 Everything at the "top-level" of your code is global. This means anything outside of functions or "blocks" like `if` statements.
 
-The global scope is also shared across all normal script tags. This can be confusing as you can use variables that aren't previously referenced in a file at all.
+The global scope is also shared across all normal script tags. This can be confusing as you can use variables that don't appear to exist in that JS file.
 
 ### Local scope
 
 Variables inside of functions or "blocks" are locally scoped. A block is created by curly brackets, like `if` statements.
 
-Local variables are not visible or usuable outside of that function or block.
+Local variables are not visible or usable outside of that function or block.
 
 ```js
 function square(x) {
