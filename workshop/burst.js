@@ -1,28 +1,24 @@
-// if (randomRange) {
-const getRandomHue = randomRange(0, 360);
-// }
+if (randomRange) {
+  const getRandomHue = randomRange(0, 360);
+}
 
-let mousedown = true;
+const { clientX, clientY } = event;
 document.addEventListener("mousedown", event => {
-  const { clientX, clientY } = event;
+  let mousedown = true;
 
   function createBurst(x, y) {
     const el = document.createElement("div");
     el.classList.add("burst");
-    const hue = getRandomHue();
-    const top = clientY - 8 / 2;
-    const left = clientX - 8 / 2;
+
     el.style.setProperty("--hue", hue);
+    const hue = getRandomHue();
+
+    const top = clientY - 4;
+    const left = clientX - 4;
     el.style.setProperty("top", top + "px");
     el.style.setProperty("left", left + "px");
 
-    function grow() {
-      let count = 0;
-      if (!mousedown) return;
-      count += 1;
-      el.style.setProperty("transform", `scale(${count})`);
-      requestAnimationFrame(grow);
-    }
+    let size = 1;
     requestAnimationFrame(grow);
     return el;
   }
@@ -34,3 +30,11 @@ document.addEventListener("mousedown", event => {
 document.addEventListener("mouseup", event => {
   mousedown = false;
 });
+
+function grow() {
+  size += 1;
+  el.style.setProperty("transform", `scale(${size})`);
+  if (mousedown) {
+    requestAnimationFrame(grow);
+  }
+}
