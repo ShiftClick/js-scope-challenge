@@ -57,7 +57,7 @@ Generally you should always prefer `let` and `const`.
 
 ## Challenge
 
-1. Clone this repo, then open `workshop/global/index.html` in your browser
+1. Clone this repo, then open `workshop/index.html` in your browser
 1. You should see a JS error in the console
 1. Fix this error by thinking about how variables are scoped
 1. Fix every error that shows up until the app works like this:
