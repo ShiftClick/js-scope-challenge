@@ -12,8 +12,8 @@ document.addEventListener("mousedown", event => {
     const hue = getRandomHue();
     el.style.setProperty("--hue", hue);
 
-    const top = clientY - 4;
-    const left = clientX - 4;
+    const top = y - 4;
+    const left = x - 4;
     el.style.setProperty("top", top + "px");
     el.style.setProperty("left", left + "px");
 
